@@ -119,44 +119,6 @@ export default async function ContactPage() {
           </div>
         </div>
       </div>
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="max-w-3xl mx-auto space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">What products do you carry?</h3>
-              <p className="text-gray-600">
-                We carry over 3,500 premium products including CBD, kratom, disposable vapes, mods, e-liquids, premium glass, water pipes, hookahs, smoking accessories, and much more. If we don't have it, we can usually get it!
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Do you offer online ordering?</h3>
-              <p className="text-gray-600">
-                Currently, we focus on our in-store experience to ensure quality service and product education. Visit any of our 100+ Texas locations for the best selection and expert advice from our knowledgeable staff.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">What are your store hours?</h3>
-              <p className="text-gray-600">
-                Most locations are open 7 days a week with extended hours. Contact your nearest Bahama Mama location for specific hours, as they may vary by store.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Do you test your CBD and kratom products?</h3>
-              <p className="text-gray-600">
-                Yes! We only carry lab-tested products from trusted brands. Quality and safety are our top priorities. Our staff can show you test results and help you choose products that meet your needs.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Do you have a rewards or loyalty program?</h3>
-              <p className="text-gray-600">
-                Yes! Ask in-store about our customer rewards program. We value our loyal customers and offer special promotions, discounts, and exclusive deals for members.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
