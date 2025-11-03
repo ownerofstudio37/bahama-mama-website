@@ -9,6 +9,7 @@ import Script from "next/script";
 import Analytics from "@/components/Analytics";
 import ClientErrorBoundary from "@/components/ClientErrorBoundary";
 import ToasterClient from "@/components/ToasterClient";
+import DemoModeBanner from "@/components/DemoModeBanner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -97,6 +98,15 @@ export default function RootLayout({
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
+        {/** Demo banner: visible when demo mode is active */}
+        {(() => {
+          const isDemo =
+            !(
+              process.env.NEXT_PUBLIC_SUPABASE_URL &&
+              process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+            ) || process.env.NEXT_PUBLIC_DEMO_MODE === "true";
+          return <DemoModeBanner demo={!!isDemo} />;
+        })()}
         {/* Google Analytics 4 - Deferred to lazyOnload for better performance */}
         <Script
           id="ga4-src"
