@@ -9,52 +9,52 @@ import { ArrowRight, Building2, Package, Briefcase, TrendingUp } from 'lucide-re
 const commercialHighlights = [
   {
     id: 1,
-    title: 'Product Photography',
-    description: 'High-end product shots for e-commerce and marketing',
-    src: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=600&fit=crop',
-    category: 'product'
+    title: 'Premium CBD Oil',
+    description: 'Full spectrum CBD tincture from top-tier brands',
+    src: 'https://images.unsplash.com/photo-1556228724-4e447ef95b5d?w=900&fit=crop',
+    category: 'cbd'
   },
   {
     id: 2,
-    title: 'Corporate Headshots',
-    description: 'Professional team portraits for business use',
-    src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop',
-    category: 'corporate'
+    title: 'Disposables & Mods',
+    description: 'Latest vape devices and disposable vapes in all flavors',
+    src: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a9?w=900&fit=crop',
+    category: 'vapes'
   },
   {
     id: 3,
-    title: 'Brand Photography',
-    description: 'Lifestyle and brand story images for marketing',
-    src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=600&fit=crop',
-    category: 'branding'
+    title: 'Kratom Selection',
+    description: 'Quality-sourced kratom in multiple strains and forms',
+    src: 'https://images.unsplash.com/photo-1585238342028-4bbc4a91b14c?w=900&fit=crop',
+    category: 'kratom'
   },
   {
     id: 4,
-    title: 'Restaurant Photography',
-    description: 'Appetizing food and restaurant atmosphere shots',
-    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=600&fit=crop',
-    category: 'food'
+    title: 'Hookah Essentials',
+    description: 'Bowls, hoses, coals, and premium shisha flavors',
+    src: 'https://images.unsplash.com/photo-1600959907703-6295e634e32e?w=900&fit=crop',
+    category: 'hookah'
   },
   {
     id: 5,
-    title: 'Real Estate',
-    description: 'Professional property and architectural photography',
-    src: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=600&fit=crop',
-    category: 'real estate'
+    title: 'Glass Water Pipe',
+    description: 'Handcrafted borosilicate glass with premium finish',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762198154/PANA4592.JPG_u3liza.jpg',
+    category: 'accessories'
   },
   {
     id: 6,
-    title: 'Industrial Photography',
-    description: 'Manufacturing and industrial facility documentation',
-    src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=600&fit=crop',
-    category: 'industrial'
+    title: 'Delta-8 Gummies',
+    description: 'Popular edibles in assorted strengths and flavors',
+    src: 'https://images.unsplash.com/photo-1615486363955-c5d3590ed4f5?w=900&fit=crop',
+    category: 'edibles'
   }
 ]
 
 const commercialStats = [
-  { icon: Building2, label: 'Business Clients', value: '150+' },
-  { icon: Package, label: 'Projects Completed', value: '800+' },
-  { icon: TrendingUp, label: 'Client Retention', value: '95%' }
+  { icon: Building2, label: 'Texas Locations', value: '100+' },
+  { icon: Package, label: 'Products Available', value: '3,500+' },
+  { icon: TrendingUp, label: 'Top Brands', value: '50+' }
 ]
 
 export default function CommercialHighlightGallery() {
@@ -84,12 +84,12 @@ export default function CommercialHighlightGallery() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Commercial Photography
-              <span className="block text-amber-600">Showcase</span>
+              Featured Products
+              <span className="block text-amber-600">Premium Selection</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Professional photography solutions that elevate your brand, showcase your products, 
-              and tell your business story with compelling visual content.
+              Explore a curated selection of high-end products from CBD and kratom to vapes, hookahs, 
+              and premium smoking accessories.
             </p>
           </motion.div>
 
@@ -231,11 +231,11 @@ export default function CommercialHighlightGallery() {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
-          {[
-            { icon: Package, title: 'Product Photography', desc: 'E-commerce & catalog images' },
-            { icon: Building2, title: 'Corporate Portraits', desc: 'Professional team photos' },
-            { icon: TrendingUp, title: 'Marketing Content', desc: 'Brand storytelling images' },
-            { icon: Briefcase, title: 'Business Events', desc: 'Conference & meeting coverage' }
+              {[
+            { icon: Package, title: 'CBD & Wellness', desc: 'Oils, tinctures, topicals, and pet CBD' },
+            { icon: Building2, title: 'Vapes & Devices', desc: 'Disposables, mods, and e-liquids' },
+            { icon: TrendingUp, title: 'Kratom & Edibles', desc: 'Multiple strains and gummy options' },
+            { icon: Briefcase, title: 'Accessories', desc: 'Glass, hookah, papers, and more' }
           ].map((service, index) => (
             <div key={index} className="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-amber-100 rounded-full mb-4">
@@ -257,25 +257,25 @@ export default function CommercialHighlightGallery() {
         >
           <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-amber-900 mb-4">
-              Ready to Elevate Your Business Visuals?
+              Ready to Explore Our Products?
             </h3>
             <p className="text-amber-700 mb-6 max-w-2xl mx-auto">
-              From product photography to corporate events, we help businesses create 
-              compelling visual content that drives results and enhances your brand image.
+              Visit your nearest Bahama Mama location to browse premium CBD, kratom, vapes, 
+              hookahs, glass, and smoking accessories.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
-                href="/services/commercial-photography" 
+                href="/services" 
                 className="btn-primary inline-flex items-center"
               >
-                View Commercial Services
+                Browse Categories
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
                 href="/contact" 
                 className="btn-secondary inline-flex items-center"
               >
-                Request Quote
+                Find a Location
               </Link>
             </div>
           </div>

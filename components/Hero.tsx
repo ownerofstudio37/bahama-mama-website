@@ -15,10 +15,10 @@ export default function Hero() {
 
   // Categories to show in homepage hero
   const homepageCategories = [
-    "professional portraits",
-    "creative portraits",
-    "product photography",
-    "brand photography",
+    "premium cbd",
+    "kratom",
+    "vapes & disposables",
+    "smoking accessories",
   ];
 
   // Demo version - no gallery images
