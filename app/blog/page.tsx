@@ -1,5 +1,3 @@
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
-import { cookies } from 'next/headers'
 import Link from 'next/link'
 import Image from 'next/image'
 import { generateSEOMetadata } from '@/lib/seo-helpers'
@@ -20,13 +18,9 @@ export const metadata = generateSEOMetadata({
 })
 
 export default async function BlogPage() {
-  const supabase = createServerComponentClient({ cookies })
-  
-  const { data: posts, error } = await supabase
-    .from('blog_posts')
-    .select('*')
-    .eq('published', true)
-    .order('published_at', { ascending: false })
+  // Demo mode: return empty blog without DB call
+  const posts: any[] = []
+  const error = null
 
   return (
     <div className="min-h-screen pt-16">

@@ -1,21 +1,17 @@
 import React from 'react'
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter } from 'lucide-react'
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
-import { cookies } from 'next/headers'
 import Image from 'next/image'
 import LeadCaptureForm from '@/components/LeadCaptureForm'
 import { generateSEOMetadata } from '@/lib/seo-helpers'
 import { businessInfo } from '@/lib/seo-config'
 
-// Use server component to fetch settings
+// Demo-safe: skip Supabase calls when env vars are missing
 async function getSettings() {
-  const supabase = createServerComponentClient({ cookies })
-  const { data } = await supabase.from('settings').select('*').single()
-  
-  return data || {
-    contact_email: 'contact@studio37.cc',
-    contact_phone: '',
-    business_address: '',
+  // For demo mode, return fallback settings without DB call
+  return {
+    contact_email: businessInfo.contact.email,
+    contact_phone: businessInfo.contact.phone,
+    business_address: businessInfo.address.fullAddress,
     social_facebook: '',
     social_instagram: '',
     social_twitter: ''

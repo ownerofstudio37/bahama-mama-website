@@ -1,6 +1,4 @@
 import React, { Suspense } from 'react'
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
-import { cookies } from 'next/headers'
 import GalleryWithSuspense from '@/components/GalleryWithSuspense'
 import { generateSEOMetadata } from '@/lib/seo-helpers'
 
@@ -20,17 +18,9 @@ export const metadata = generateSEOMetadata({
 })
 
 export default async function GalleryPage() {
-  const supabase = createServerComponentClient({ cookies })
-  
-  const { data: images } = await supabase
-    .from('gallery_images')
-    .select('*')
-    .order('created_at', { ascending: false })
-  
-  // Get unique categories
-  const categories = images ? 
-    ['all', ...Array.from(new Set(images.map(img => img.category)))] : 
-    ['all']
+  // Demo mode: return empty gallery without DB call
+  const images: any[] = []
+  const categories = ['all']
   
   return (
     <div className="pt-16 min-h-screen bg-gradient-to-b from-gray-50 to-white">
