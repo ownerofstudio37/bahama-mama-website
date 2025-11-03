@@ -13,7 +13,7 @@ export function middleware(req: NextRequest) {
   ) {
     const hasSession = req.cookies.has('admin_session')
     if (!hasSession) {
-      const loginUrl = new URL('/login', req.url)
+      const loginUrl = new URL('/admin/login', req.url)
       // Preserve original destination to return after login
       loginUrl.searchParams.set('next', pathname)
       return NextResponse.redirect(loginUrl)

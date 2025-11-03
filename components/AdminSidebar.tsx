@@ -89,6 +89,10 @@ export default function AdminSidebar() {
       setUser(null);
       setProfile(null);
       await supabase.auth.signOut();
+      // Clear demo cookie as well
+      try {
+        await fetch('/api/admin/demo-logout', { method: 'POST' })
+      } catch (_) {}
 
       // Use window.location for clean logout redirect
       // Add a small delay to ensure signOut completes
