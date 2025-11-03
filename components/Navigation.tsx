@@ -11,9 +11,8 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [logoUrl, setLogoUrl] = useState<string | null>(null)
   const [dbLogoUrl, setDbLogoUrl] = useState<string | null>(null)
-  // Badge concept (light/dark) as default fallbacks
-  const DEFAULT_LOGO_LIGHT = '/brand/bahama-mama-badge-light.svg'
-  const DEFAULT_LOGO_DARK = '/brand/bahama-mama-badge-dark.svg'
+  // Use the new Bahama Mama logo
+  const DEFAULT_LOGO = 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762200828/bahamamama-logo_cwzy8t.png'
   
   // Avoid hydration mismatch by only rendering after mount
   useEffect(() => {
@@ -47,8 +46,8 @@ export default function Navigation() {
       setLogoUrl(dbLogoUrl)
       return
     }
-    // Fallback to badge variants depending on scroll state for contrast
-    setLogoUrl(scrolled ? DEFAULT_LOGO_LIGHT : DEFAULT_LOGO_DARK)
+    // Use the new Bahama Mama logo
+    setLogoUrl(DEFAULT_LOGO)
   }, [dbLogoUrl, scrolled])
 
   return (
