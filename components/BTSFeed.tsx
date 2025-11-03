@@ -22,70 +22,70 @@ interface BTSPost {
 const BTS_POSTS: BTSPost[] = [
   {
     id: '1',
-    avatar: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1758315615/_MG_9234_aerdni_e_gen_restore_e_improve_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.36_o_80_fl_layer_apply_g_west_x_0.03_y_0.04_bmly4s.jpg',
-    author: '@studio37photography',
+    avatar: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199448/PANA5655.JPG_dnjq94.jpg',
+    author: '@bahamamama',
     time: '2 hours ago',
-    content: '🎬 Behind the scenes of today\'s portrait session! The magic happens when natural light meets genuine emotion. Every shot tells a story.',
-    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1760503070/F836BA20-9A10-4D23-81E3-9CB8999E1368_1_105_c_ji0ngc_e_gen_restore_e_improve_e_sharpen_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.36_o_80_fl_layer_apply_g_west_x_0.03_y_0.04_gxtw8e.jpg',
-    likes: 47,
-    comments: 12,
-    shares: 8,
+    content: '� Just restocked our premium glass collection! Check out these beautiful handcrafted pieces. Every item is a work of art.',
+    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762198154/PANA4592.JPG_u3liza.jpg',
+    likes: 147,
+    comments: 23,
+    shares: 18,
     type: 'post',
-    hashtags: ['BehindTheScenes', 'PortraitPhotography', 'PinehurstTX']
+    hashtags: ['PremiumGlass', 'SmokeShop', 'BahamaMama', 'TexasRetail']
   },
   {
     id: '2',
-    avatar: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1758315656/IMG_6580_axayxe_e_gen_restore_e_improve_e_sharpen_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.36_o_80_fl_layer_apply_g_west_x_0.03_y_0.04_nkjfev.jpg',
-    author: '@studio37photography',
+    avatar: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5314.JPG_dxkjit.jpg',
+    author: '@bahamamama',
     time: '1 day ago',
-    content: '✨ Editing session in progress! There\'s something deeply satisfying about bringing out the perfect tones and emotions in each image. This is where the real magic happens in post-production.',
+    content: '✨ New arrivals daily! Our vape selection keeps growing with the latest devices and flavors. Come see what\'s new!',
     images: [
-      'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300&h=200&fit=crop',
-      'https://images.unsplash.com/photo-1551845128-58b5e2bf4b23?w=300&h=200&fit=crop'
+      'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199448/PANA5593.JPG_efk8tg.jpg',
+      'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5465.JPG_fvkcsf.jpg'
     ],
-    likes: 62,
-    comments: 18,
-    shares: 15,
+    likes: 89,
+    comments: 15,
+    shares: 12,
     type: 'reel',
-    hashtags: ['PhotoEditing', 'StudioLife', 'CreativeProcess']
+    hashtags: ['VapeLife', 'NewArrivals', 'TexasVapeShop']
   },
   {
     id: '3',
     avatar: '',
-    author: '@studio37photography',
+    author: '@bahamamama',
     time: '3 days ago',
-    content: '📸 New equipment day! Just upgraded our lighting setup for even better portrait sessions. Can\'t wait to create some stunning images with this new gear! Montgomery County clients, you\'re in for a treat!',
-    likes: 89,
-    comments: 25,
-    shares: 22,
+    content: '🏪 Store spotlight! Browse over 3,500 premium products across CBD, kratom, vapes, and smoking accessories. Visit any of our 100+ Texas locations!',
+    likes: 203,
+    comments: 31,
+    shares: 45,
     type: 'story',
-    hashtags: ['NewGear', 'PhotographyEquipment', 'UpgradeComplete', 'Studio37']
+    hashtags: ['RetailExperience', 'CBDTexas', 'BahamaMama', 'TexasLocations']
   },
   {
     id: '4',
-    avatar: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1758315615/_MG_9234_aerdni_e_gen_restore_e_improve_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.36_o_80_fl_layer_apply_g_west_x_0.03_y_0.04_bmly4s.jpg',
-    author: '@studio37photography',
+    avatar: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199448/PANA5897.JPG_ykxxi6.jpg',
+    author: '@bahamamama',
     time: '5 days ago',
-    content: '🌅 Golden hour sessions never disappoint! Working with this beautiful natural light in Montgomery County parks creates the most stunning portraits. There\'s nothing quite like that warm, dreamy glow.',
-    image: 'https://images.unsplash.com/photo-1554080353-a576cf803bda?w=600&h=400&fit=crop',
-    likes: 134,
-    comments: 31,
-    shares: 28,
+    content: '💎 Premium CBD & kratom selection! Quality tested and sourced from trusted brands. Our knowledgeable staff can help you find exactly what you need.',
+    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5421.JPG_unmnos.jpg',
+    likes: 167,
+    comments: 28,
+    shares: 22,
     type: 'post',
-    hashtags: ['GoldenHour', 'NaturalLight', 'MontgomeryCounty', 'PortraitSession']
+    hashtags: ['PremiumCBD', 'KratomTexas', 'Wellness', 'QualityProducts']
   },
   {
     id: '5',
-    avatar: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1758315656/IMG_6580_axayxe_e_gen_restore_e_improve_e_sharpen_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.36_o_80_fl_layer_apply_g_west_x_0.03_y_0.04_nkjfev.jpg',
-    author: '@studio37photography', 
+    avatar: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5249.JPG_n5xdtm.jpg',
+    author: '@bahamamama', 
     time: '1 week ago',
-    content: '💍 Wedding season is here! Spent the weekend capturing love stories at The Woodlands venues. Every couple has such a unique story to tell through our lens.',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop',
-    likes: 203,
-    comments: 45,
-    shares: 67,
+    content: '🎨 Artistic glass pieces that are functional and beautiful. From water pipes to decorative pieces, we have something for every collector.',
+    image: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5281.JPG_yaainy.jpg',
+    likes: 234,
+    comments: 42,
+    shares: 56,
     type: 'post',
-    hashtags: ['WeddingSeason', 'LoveStories', 'TheWoodlands', 'CouplesPhotography']
+    hashtags: ['GlassArt', 'FunctionalArt', 'WaterPipes', 'Collectibles']
   }
 ]
 

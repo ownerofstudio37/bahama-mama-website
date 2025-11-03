@@ -11,7 +11,7 @@ const testimonials = [
 		service: 'CBD Products',
 		rating: 5,
 		text: 'Best CBD selection in Houston! The staff is incredibly knowledgeable and helped me find the perfect products for my needs. Quality is top-notch and prices are fair.',
-		image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face'
+		image: 'https://ui-avatars.com/api/?name=Marcus+T&background=14b8a6&color=fff&size=100'
 	},
 	{
 		id: 2,
@@ -19,7 +19,7 @@ const testimonials = [
 		service: 'Vape Products',
 		rating: 5,
 		text: 'Bahama Mama has everything! Huge selection of disposables and mods, plus the staff actually knows what they\'re talking about. My go-to shop for all vape needs.',
-		image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
+		image: 'https://ui-avatars.com/api/?name=Jessica+R&background=14b8a6&color=fff&size=100'
 	},
 	{
 		id: 3,
@@ -27,7 +27,7 @@ const testimonials = [
 		service: 'Kratom & Accessories',
 		rating: 5,
 		text: 'Quality kratom at great prices, plus an amazing selection of water pipes and smoking accessories. Clean store, friendly staff, and they always have what I need.',
-		image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
+		image: 'https://ui-avatars.com/api/?name=David+L&background=14b8a6&color=fff&size=100'
 	}
 ]
 
