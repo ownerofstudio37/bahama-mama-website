@@ -305,8 +305,9 @@ export class SEOAnalyzer {
    * Analyze links
    */
   private analyzeLinks(): LinkAnalysis {
-    const linkMatches =
-      this.content.match(/<a[^>]+href=["']([^"']+)["'][^>]*>/gi) || [];
+    // Ensure TypeScript infers string[] instead of never[] when no matches
+    const linkMatches: string[] =
+      (this.content.match(/<a[^>]+href=["']([^"']+)["'][^>]*>/gi) ?? []) as string[];
 
     let internalLinks = 0;
     let externalLinks = 0;
