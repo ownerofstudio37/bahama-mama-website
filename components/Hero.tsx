@@ -59,7 +59,7 @@ export default function Hero() {
     galleryImages.length > 0
       ? galleryImages[currentIndex]?.image_url
       : cfg?.hero_image ||
-        "https://res.cloudinary.com/dmjxho2rl/image/upload/v1759639187/A4B03835-ED8B-4FBB-A27E-1F2EE6CA1A18_1_105_c_gstgil_e_gen_restore_e_improve_e_sharpen_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.40_o_80_fl_layer_apply_g_south_x_0.03_y_0.04_yqgycj.jpg";
+        "https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199443/PANA5122.JPG_jith74.jpg";
 
   // Admin-configurable appearance fallbacks
   const heroMinHeight: string = siteSettings?.hero_min_height || "70vh"; // reduced from full screen
