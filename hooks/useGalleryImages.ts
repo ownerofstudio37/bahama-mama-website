@@ -1,7 +1,7 @@
 "use client"
 
 import { useQuery, UseQueryOptions } from '@tanstack/react-query'
-import { supabase, GalleryImage } from '@/lib/supabase'
+import type { GalleryImage } from '@/lib/supabase'
 
 export type GalleryQueryParams = {
   categories?: string[]
@@ -12,36 +12,10 @@ export type GalleryQueryParams = {
   select?: string
 }
 
-async function fetchGalleryImages(params: GalleryQueryParams = {}): Promise<GalleryImage[]> {
-  const {
-    categories,
-    featured,
-    limit,
-    orderBy = 'created_at',
-    ascending = false,
-    select = '*',
-  } = params
-
-  let query = supabase
-    .from('gallery_images')
-    .select(select)
-
-  if (categories && categories.length > 0) {
-    query = query.in('category', categories)
-  }
-  if (typeof featured === 'boolean') {
-    query = query.eq('featured', featured)
-  }
-  if (orderBy) {
-    query = query.order(orderBy as string, { ascending })
-  }
-  if (typeof limit === 'number') {
-    query = query.limit(limit)
-  }
-
-  const { data, error } = await query.returns<GalleryImage[]>()
-  if (error) throw error
-  return data ?? []
+// Demo-safe stub: return an empty array (no Supabase calls during demo)
+async function fetchGalleryImages(_params: GalleryQueryParams = {}): Promise<GalleryImage[]> {
+  // If you later wire up Supabase, replace this stub with a real query.
+  return []
 }
 
 export function useGalleryImages(
