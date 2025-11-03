@@ -1,7 +1,7 @@
 import React from 'react'
-import { Mail, Phone, MapPin, Instagram, Facebook, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 import Image from 'next/image'
-import LeadCaptureForm from '@/components/LeadCaptureForm'
+import LocationFinder from '@/components/LocationFinder'
 import { generateSEOMetadata } from '@/lib/seo-helpers'
 import { businessInfo } from '@/lib/seo-config'
 
@@ -19,16 +19,16 @@ async function getSettings() {
 }
 
 export const metadata = generateSEOMetadata({
-  title: 'Contact Bahama Mama - Premium Smoke Shop in Texas',
-  description: `Contact Bahama Mama for premium CBD, kratom, vapes, and smoking accessories. Located at ${businessInfo.address.fullAddress}. Call ${businessInfo.contact.phone} or email ${businessInfo.contact.email} for product inquiries.`,
+  title: 'Find a Store - Bahama Mama Locations Across Texas',
+  description: `Find a Bahama Mama smoke shop near you. 100+ locations across Texas offering premium CBD, kratom, vapes, and smoking accessories. Call ${businessInfo.contact.phone} for more information.`,
   keywords: [
-    'contact Bahama Mama',
-    'smoke shop Texas',
-    'CBD retailer contact',
-    'vape shop inquiries',
-    'kratom store Texas',
-    'smoking accessories contact',
-    'Texas smoke shop location'
+    'Bahama Mama locations',
+    'smoke shop near me Texas',
+    'CBD store locations Texas',
+    'vape shop locations',
+    'kratom store near me',
+    'Texas smoke shop finder',
+    'Bahama Mama store finder'
   ],
   canonicalUrl: 'https://studio37.cc/contact',
   pageType: 'contact'
@@ -49,75 +49,75 @@ export default async function ContactPage() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
+        <div className="absolute inset-0 bg-black bg-opacity-50" />
       </div>
-      <div className="container mx-auto px-4 py-24 max-w-3xl w-full flex-1 relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Contact Us</h1>
-        <p className="text-xl text-gray-200 mb-8">
-          Get in touch with our team for product inquiries, store locations, or any questions about our premium selection.
-        </p>
-        {/* Contact Form and Information */}
-        <section className="py-8">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-white">Send Us a Message</h2>
-              <LeadCaptureForm />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-white">Contact Information</h2>
-              <div className="space-y-8">
-                {/* Email */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1 text-white">Email</h3>
-                    <a href={`mailto:${businessInfo.contact.email}`} className="text-primary-400 hover:text-primary-300 underline">
-                      {businessInfo.contact.email}
-                    </a>
-                    <p className="text-gray-200 mt-1">
-                      We respond to all inquiries within 24 hours during business days.
-                    </p>
-                  </div>
-                </div>
-                {/* Phone */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1 text-white">Phone</h3>
-                    <a href={`tel:${businessInfo.contact.phone}`} className="text-primary-400 hover:text-primary-300 underline">
-                      {businessInfo.contact.phone}
-                    </a>
-                    <p className="text-gray-200 mt-1">
-                      Available Monday-Friday, 9AM-6PM CST
-                    </p>
-                  </div>
-                </div>
-                {/* Address */}
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1 text-white">Store Location</h3>
-                    <p className="text-gray-200">
-                      {businessInfo.address.fullAddress}
-                    </p>
-                    <p className="text-gray-200 mt-1">
-                      One of 100+ locations serving Texas
-                    </p>
-                    <p className="text-gray-200 mt-1">
-                      Open 7 days a week - Walk-ins welcome!
-                    </p>
-                  </div>
-                </div>
+      
+      <div className="container mx-auto px-4 py-24 max-w-7xl w-full flex-1 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">Find a Store Near You</h1>
+          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+            100+ locations across Texas offering premium CBD, kratom, vapes, and smoking accessories
+          </p>
+        </div>
+
+        {/* Location Finder */}
+        <LocationFinder />
+
+        {/* Contact Information Card */}
+        <div className="mt-16 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-8">
+          <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Corporate Contact</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {/* Email */}
+            <div className="text-center">
+              <div className="inline-flex w-16 h-16 bg-primary-100 rounded-full items-center justify-center mb-4">
+                <Mail className="h-8 w-8 text-primary-600" />
               </div>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">Email Us</h3>
+              <a 
+                href={`mailto:${businessInfo.contact.email}`} 
+                className="text-primary-600 hover:text-primary-700 underline block"
+              >
+                {businessInfo.contact.email}
+              </a>
+              <p className="text-gray-600 mt-2 text-sm">
+                General inquiries & support
+              </p>
+            </div>
+
+            {/* Phone */}
+            <div className="text-center">
+              <div className="inline-flex w-16 h-16 bg-primary-100 rounded-full items-center justify-center mb-4">
+                <Phone className="h-8 w-8 text-primary-600" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">Call Us</h3>
+              <a 
+                href={`tel:${businessInfo.contact.phone}`} 
+                className="text-primary-600 hover:text-primary-700 underline block"
+              >
+                {businessInfo.contact.phone}
+              </a>
+              <p className="text-gray-600 mt-2 text-sm">
+                Mon-Fri, 9AM-6PM CST
+              </p>
+            </div>
+
+            {/* Headquarters */}
+            <div className="text-center">
+              <div className="inline-flex w-16 h-16 bg-primary-100 rounded-full items-center justify-center mb-4">
+                <MapPin className="h-8 w-8 text-primary-600" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">Headquarters</h3>
+              <p className="text-gray-700">
+                {businessInfo.address.fullAddress}
+              </p>
+              <p className="text-gray-600 mt-2 text-sm">
+                Corporate offices
+              </p>
             </div>
           </div>
-        </section>
+        </div>
       </div>
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
