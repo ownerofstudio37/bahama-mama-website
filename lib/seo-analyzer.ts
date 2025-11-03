@@ -658,7 +658,8 @@ export async function generateMetaDescription(
     console.warn("Network error calling AI endpoint:", error.message);
   }
 
-  const sentences = plainText.match(/[^.!?]+[.!?]+/g) || [];
+  // Ensure sentences is typed as string[] to avoid never[] inference
+  const sentences: string[] = (plainText.match(/[^.!?]+[.!?]+/g) ?? []) as string[];
 
   // Extract key information
   const words = plainText.toLowerCase().split(/\s+/);
@@ -799,7 +800,7 @@ export async function generateTitle(
 
   // If no H1, look for the first strong statement
   if (!title) {
-    const sentences = plainText.match(/[^.!?]+/g) || [];
+  const sentences: string[] = (plainText.match(/[^.!?]+/g) ?? []) as string[];
     // Find a sentence that looks like a title (shorter, punchy)
     const potentialTitle = sentences.find((s) => {
       const len = s.trim().length;
