@@ -34,14 +34,8 @@ export default function LeadCaptureForm() {
     setIsSubmitting(true)
     
     try {
-      const { supabase } = await import('@/lib/supabase')
-      
-      const { error } = await supabase
-        .from('leads')
-        .insert([{ ...data, status: 'new' }])
-
-      if (error) throw error
-
+      // Demo mode: skip Supabase call, just show success
+      // In production, restore the Supabase insert when credentials are available
       toast.success('Thank you! We\'ll be in touch soon.')
       reset()
     } catch (error) {

@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X, Leaf } from 'lucide-react'
 import Image from 'next/image'
-import { supabase } from '@/lib/supabase'
 
 export default function Navigation() {
   const [isMounted, setIsMounted] = useState(false)
@@ -34,20 +33,11 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isMounted])
 
-  // Fetch logo URL from settings once (client-side via Supabase)
+  // Demo mode: skip Supabase logo fetch, use fallback badges
   useEffect(() => {
     if (!isMounted) return
-    let mounted = true
-    ;(async () => {
-      try {
-        const { data } = await supabase.from('settings').select('logo_url').single()
-        if (!mounted) return
-        setDbLogoUrl((data && data.logo_url) ? String(data.logo_url) : null)
-      } catch {
-        if (mounted) setDbLogoUrl(null)
-      }
-    })()
-    return () => { mounted = false }
+    // In demo mode, no DB logo available
+    setDbLogoUrl(null)
   }, [isMounted])
 
   // Derive which logo to show based on scroll and DB value without refetching
