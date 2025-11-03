@@ -5,113 +5,77 @@ import { generateSEOMetadata } from '@/lib/seo-helpers'
 import BTSFeed from '@/components/BTSFeed'
 
 export const metadata = generateSEOMetadata({
-  title: 'About Studio37 - Christian & Caitie Photography Team in Pinehurst, TX',
-  description: 'Meet Christian and Caitie, the award-winning photography team behind Studio37 in Pinehurst, Texas. Serving Montgomery County with personalized sessions and artistic excellence.',
+  title: 'About Bahama Mama - Texas\'s #1 Premier CBD & Smoke Shop',
+  description: 'Discover Bahama Mama, Texas\'s leading smoke shop with 100+ locations. Offering 3,500+ premium CBD, kratom, vape, and smoking accessory products with expert service.',
   keywords: [
-    'about Studio37',
-    'Christian photographer Pinehurst TX',
-    'Caitie photographer Texas',
-    'photography team Montgomery County',
-    'professional photographer Pinehurst',
-    'award winning photographer Texas'
+    'about Bahama Mama',
+    'smoke shop Texas',
+    'CBD store Texas locations',
+    'kratom retailer Texas',
+    'vape shop Houston Dallas Austin',
+    'premium smoke shop'
   ],
-  canonicalUrl: 'https://studio37.cc/about'
+  canonicalUrl: 'https://bahama-mama.com/about'
 })
 
 export default function AboutPage() {
   return (
     <div className="pt-16 min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-blue-900 text-white py-20">
+      <section className="relative bg-gradient-to-r from-teal-900 to-teal-700 text-white py-20">
         <div className="absolute inset-0 opacity-30">
           <img
             src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1759639187/A4B03835-ED8B-4FBB-A27E-1F2EE6CA1A18_1_105_c_gstgil_e_gen_restore_e_improve_e_sharpen_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.40_o_80_fl_layer_apply_g_south_x_0.03_y_0.04_yqgycj.jpg"
-            alt="Studio37 Photography workspace"
+            alt="Bahama Mama store interior"
             className="object-cover w-full h-full"
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">About Studio37 Photography</h1>
+          <h1 className="text-5xl font-bold mb-6">About Bahama Mama</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Meet the passionate photographers behind Pinehurst's premier photography studio, 
-            capturing life's most precious moments throughout Montgomery County.
+            Discover Texas's #1 premier CBD and alternative products retailer with 100+ locations 
+            offering 3,500+ quality products and exceptional customer service.
           </p>
         </div>
       </section>
 
-      {/* Meet the Team */}
+      {/* Our Mission */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Meet Your Photography Team</h2>
+            <h2 className="text-4xl font-bold mb-4">Our Mission & Values</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Christian and Caitie bring together years of experience, artistic vision, and genuine passion 
-              for storytelling through photography.
+              At Bahama Mama, we're committed to providing premium products, 
+              expert guidance, and a welcoming environment for all our customers.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Christian */}
-            <div className="text-center">
-              <div className="relative mb-8">
-                <div className="w-80 h-80 mx-auto rounded-full overflow-hidden shadow-2xl">
-                  <img
-                    src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1758315615/_MG_9234_aerdni_e_gen_restore_e_improve_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.36_o_80_fl_layer_apply_g_west_x_0.03_y_0.04_bmly4s.jpg"
-                    alt="Christian - CEO, Marketing Lead, Producer and Photographer at Studio37"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold">
-                  Lead Photographer
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Christian</h3>
-              <p className="text-blue-600 font-semibold mb-4">
-                CEO, Marketing Lead, Producer & Photographer
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-teal-50 p-8 rounded-lg text-center">
+              <div className="text-4xl mb-4">🌿</div>
+              <h3 className="text-xl font-bold mb-3">Quality First</h3>
+              <p className="text-gray-600">
+                Every product is carefully selected and lab-tested to ensure 
+                the highest quality and purity standards.
               </p>
-              <div className="bg-gray-50 p-6 rounded-lg text-left">
-                <p className="text-gray-700 mb-4">
-                  Christian brings a unique blend of business acumen and artistic vision to Studio37. 
-                  As CEO and lead photographer, he's passionate about creating not just beautiful images, 
-                  but meaningful experiences for every client.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Specializes in wedding and commercial photography</li>
-                  <li>• 5+ years professional experience</li>
-                  <li>• Expert in client relations and project management</li>
-                </ul>
-              </div>
             </div>
 
-            {/* Caitie */}
-            <div className="text-center">
-              <div className="relative mb-8">
-                <div className="w-80 h-80 mx-auto rounded-full overflow-hidden shadow-2xl">
-                  <img
-                    src="https://res.cloudinary.com/dmjxho2rl/image/upload/v1758315656/IMG_6580_axayxe_e_gen_restore_e_improve_e_sharpen_l_image_upload_My_Brand_IMG_2115_mtuowt_c_scale_fl_relative_w_0.36_o_80_fl_layer_apply_g_west_x_0.03_y_0.04_nkjfev.jpg"
-                    alt="Caitie - Co-Owner, Photographer and Editor at Studio37"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-6 py-2 rounded-full font-semibold">
-                  Creative Director
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Caitie</h3>
-              <p className="text-purple-600 font-semibold mb-4">
-                Co-Owner, Photographer & Editor
+            <div className="bg-amber-50 p-8 rounded-lg text-center">
+              <div className="text-4xl mb-4">🎓</div>
+              <h3 className="text-xl font-bold mb-3">Expert Guidance</h3>
+              <p className="text-gray-600">
+                Our knowledgeable staff provides personalized recommendations 
+                to help you find the perfect products for your needs.
               </p>
-              <div className="bg-gray-50 p-6 rounded-lg text-left">
-                <p className="text-gray-700 mb-4">
-                  Caitie's artistic eye and attention to detail ensure every image tells a perfect story. 
-                  As co-owner and lead editor, she brings creativity and technical excellence to every project.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Specializes in portraits and family photography</li>
-                  <li>• Expert photo editor and post-production artist</li>
-                  <li>• Creative vision and artistic direction</li>
-                </ul>
-              </div>
+            </div>
+
+            <div className="bg-blue-50 p-8 rounded-lg text-center">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="text-xl font-bold mb-3">Community Focus</h3>
+              <p className="text-gray-600">
+                We're proud to serve Texas communities with exceptional 
+                service and a welcoming, judgment-free environment.
+              </p>
             </div>
           </div>
         </div>
@@ -122,44 +86,44 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Story</h2>
+              <h2 className="text-3xl font-bold mb-4">The Bahama Mama Story</h2>
               <p className="text-lg text-gray-600">
-                How Studio37 became Pinehurst's most trusted photography studio
+                How we became Texas's #1 premier CBD and smoke shop
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-blue-600">Founded on Passion</h3>
+                <h3 className="text-2xl font-bold mb-4 text-teal-600">Founded on Quality</h3>
                 <p className="text-gray-700 mb-6">
-                  Studio37 Photography was born from Christian and Caitie's shared passion for capturing 
-                  life's most meaningful moments. What started as a creative outlet quickly grew into 
-                  Pinehurst's premier photography studio.
+                  Bahama Mama started with a simple mission: to provide Texans with access to 
+                  premium CBD and alternative products in a professional, welcoming environment. 
+                  Today, we operate 100+ locations across the state.
                 </p>
                 
-                <h3 className="text-2xl font-bold mb-4 text-blue-600">Local Roots, Personal Touch</h3>
+                <h3 className="text-2xl font-bold mb-4 text-teal-600">Unmatched Selection</h3>
                 <p className="text-gray-700 mb-6">
-                  As Pinehurst residents, we understand the unique beauty of Montgomery County. 
-                  We're not just your photographers – we're your neighbors, invested in capturing 
-                  your story with the care and attention it deserves.
+                  With over 3,500 different products spanning CBD, kratom, vapes, hookahs, water pipes, 
+                  and smoking accessories, we offer the most comprehensive selection in Texas. 
+                  Our inventory includes top brands and exclusive products you won't find elsewhere.
                 </p>
 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span>500+ happy clients served</span>
+                    <span>100+ Texas locations</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span>4.9-star average rating</span>
+                    <span>3,500+ premium products</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span>Award-winning photography team</span>
+                    <span>#1 premier CBD retailer</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span>Serving Montgomery County since 2020</span>
+                    <span>Lab-tested, quality guaranteed</span>
                   </div>
                 </div>
               </div>
@@ -173,26 +137,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-teal-600 to-amber-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Work with Studio37?</h2>
+          <h2 className="text-3xl font-bold mb-4">Visit Bahama Mama Today</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let's discuss your photography needs and create beautiful memories together. 
-            Christian and Caitie are excited to capture your story!
+            Find your nearest location and discover why we're Texas's #1 choice for 
+            premium CBD, kratom, vapes, and smoking accessories.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get In Touch
+              Find a Location
             </Link>
             <Link 
-              href="/gallery" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              href="/services" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
             >
-              View Our Work
+              Browse Products
             </Link>
           </div>
         </div>

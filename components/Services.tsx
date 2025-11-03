@@ -5,65 +5,65 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 // Demo version - no gallery hook needed
-import { Camera, Users, Building, Heart, ArrowRight } from 'lucide-react'
+import { Leaf, Droplet, Wind, Package, ArrowRight } from 'lucide-react'
 
 const services = [
-		{
-			icon: Heart,
-			title: 'Wedding Photography',
-			description:
-				'Capture your special day with romantic and timeless images that tell your love story.',
-			features: [
-				'Full day coverage',
-				'Engagement session',
-				'Digital gallery',
-				'Print options',
-			],
-			category: 'wedding',
-			slug: 'wedding-photography',
-		},
-		{
-			icon: Users,
-			title: 'Portrait Sessions',
-			description:
-				'Professional headshots, family portraits, and individual sessions in studio or on location.',
-			features: [
-				'Studio or outdoor',
-				'Multiple outfits',
-				'Retouched images',
-				'Same day preview',
-			],
-			category: 'professional portraits',
-			slug: 'portrait-photography',
-		},
-		{
-			icon: Camera,
-			title: 'Event Photography',
-			description:
-				'Document your corporate events, parties, and celebrations with candid and posed shots.',
-			features: [
-				'Event coverage',
-				'Candid moments',
-				'Group photos',
-				'Quick turnaround',
-			],
-			category: 'event',
-			slug: 'event-photography',
-		},
-		{
-			icon: Building,
-			title: 'Commercial Photography',
-			description:
-				'Product photography, business headshots, and marketing materials for your brand.',
-			features: [
-				'Product shots',
-				'Brand imagery',
-				'Marketing content',
-				'Commercial rights',
-			],
-			category: 'product photography',
-			slug: 'commercial-photography',
-		},
+	{
+		icon: Leaf,
+		title: 'Premium CBD Products',
+		description:
+			'High-quality CBD oils, tinctures, edibles, and topicals from trusted brands.',
+		features: [
+			'Lab-tested purity',
+			'Full spectrum & isolates',
+			'CBD pet products',
+			'Expert recommendations',
+		],
+		category: 'cbd',
+		slug: 'cbd-products',
+	},
+	{
+		icon: Droplet,
+		title: 'Kratom Selection',
+		description:
+			'Extensive variety of kratom strains and forms to meet your wellness needs.',
+		features: [
+			'Multiple strains',
+			'Powder & capsules',
+			'Quality sourced',
+			'Batch tested',
+		],
+		category: 'kratom',
+		slug: 'kratom-products',
+	},
+	{
+		icon: Wind,
+		title: 'Vapes & Disposables',
+		description:
+			'Latest vape devices, mods, disposables, and premium e-liquids.',
+		features: [
+			'Top brands',
+			'Disposable vapes',
+			'Vape mods',
+			'All flavors',
+		],
+		category: 'vapes',
+		slug: 'vape-products',
+	},
+	{
+		icon: Package,
+		title: 'Smoking Accessories',
+		description:
+			'Complete selection of water pipes, hookahs, and smoking essentials.',
+		features: [
+			'Water pipes & bongs',
+			'Hookah products',
+			'Rolling papers',
+			'Cleaning supplies',
+		],
+		category: 'accessories',
+		slug: 'smoking-accessories',
+	},
 ]
 
 export default function Services() {
@@ -107,12 +107,11 @@ export default function Services() {
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-16">
 					<h2 className="text-4xl font-bold mb-4">
-						Our Photography Services
+						Premium Products for Your Lifestyle
 					</h2>
 					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
-						From intimate portraits to grand celebrations, we offer
-						comprehensive photography services tailored to your unique
-						needs.
+						Discover over 3,500 quality products across CBD, kratom, vapes, and smoking accessories 
+						at Texas's #1 premier smoke shop.
 					</p>
 				</div>
 
