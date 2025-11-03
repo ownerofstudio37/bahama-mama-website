@@ -2,7 +2,6 @@
 
 'use client';
 import React, { useState } from 'react';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 
 
 
@@ -13,19 +12,11 @@ export default function DiscountNewsletterModal() {
   const [phone, setPhone] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const supabase = createClientComponentClient();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
-    // Insert lead into Supabase CRM
-    const { error } = await supabase
-      .from('leads')
-      .insert({ name, email, phone });
-    if (error) {
-      setError('Sorry, there was a problem saving your info. Please try again.');
-      return;
-    }
+    // Demo mode: skip Supabase call, show success
     setSubmitted(true);
   };
 
