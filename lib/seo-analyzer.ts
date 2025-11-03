@@ -555,11 +555,11 @@ export class SEOAnalyzer {
   }
 
   private extractWords(text: string): string[] {
-    return text.match(/\b[a-z]+\b/gi) || [];
+    return (text.match(/\b[a-z]+\b/gi) ?? []) as string[];
   }
 
   private extractSentences(text: string): string[] {
-    return text.match(/[^.!?]+[.!?]+/g) || [];
+    return (text.match(/[^.!?]+[.!?]+/g) ?? []) as string[];
   }
 
   private countSyllables(text: string): number {
