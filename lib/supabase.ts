@@ -1,17 +1,47 @@
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://demo.supabase.co'
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'demo-key'
+
+// For demo purposes, create a mock client if no real credentials are provided
+const createDemoClient = () => ({
+  from: (table: string) => ({
+    select: (columns?: string, options?: any) => ({
+      single: () => Promise.resolve({ data: null, error: null }),
+      maybeSingle: () => Promise.resolve({ data: null, error: null }),
+      eq: () => ({
+        maybeSingle: () => Promise.resolve({ data: null, error: null }),
+        single: () => Promise.resolve({ data: null, error: null }),
+      }),
+      order: () => ({
+        limit: () => Promise.resolve({ data: [], error: null }),
+      }),
+      limit: () => Promise.resolve({ data: [], error: null }),
+      range: () => Promise.resolve({ data: [], error: null, count: 0 }),
+    }),
+    insert: () => Promise.resolve({ data: null, error: null }),
+    update: () => Promise.resolve({ data: null, error: null }),
+    delete: () => Promise.resolve({ data: null, error: null }),
+  }),
+  auth: {
+    getUser: () => Promise.resolve({ data: { user: null }, error: null }),
+    signInWithPassword: () => Promise.resolve({ data: null, error: null }),
+    signOut: () => Promise.resolve({ error: null }),
+  },
+})
 
 // Ensure a singleton client in the browser (prevents Multiple GoTrueClient warnings in dev)
 declare global {
   // eslint-disable-next-line no-var
-  var __supabase: SupabaseClient | undefined
+  var __supabase: SupabaseClient | any
 }
 
-export const supabase: SupabaseClient =
-  globalThis.__supabase ?? createClient(supabaseUrl, supabaseAnonKey)
+export const supabase: SupabaseClient | any =
+  globalThis.__supabase ?? 
+  (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY 
+    ? createClient(supabaseUrl, supabaseAnonKey)
+    : createDemoClient())
 
 if (typeof window !== 'undefined') {
   globalThis.__supabase = supabase

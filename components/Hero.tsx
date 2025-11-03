@@ -4,8 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Leaf, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { getPageConfig } from "@/lib/pageConfig";
-import { useGalleryImages } from "@/hooks/useGalleryImages";
+// Demo version - no hooks needed
 
 export default function Hero() {
   const [cfg, setCfg] = useState<Record<string, any> | null>(null);
@@ -22,30 +21,16 @@ export default function Hero() {
     "brand photography",
   ];
 
-  // React Query: featured images for homepage categories
-  const { data: featuredImages } = useGalleryImages({
-    categories: homepageCategories,
-    featured: true,
-    orderBy: "display_order",
-    ascending: true,
-  });
+  // Demo version - no gallery images
+  const featuredImages = null;
 
   useEffect(() => {
-    getPageConfig("home").then((c) => setCfg(c?.data || null));
+    setCfg(null); // Demo mode
   }, []);
 
-  // Fetch site-wide settings to allow hero customization from Admin > Settings
+  // Demo version - no database settings needed
   useEffect(() => {
-    (async () => {
-      try {
-        const { supabase } = await import("@/lib/supabase");
-        const { data } = await supabase.from("settings").select("*").single();
-        if (data) setSiteSettings(data);
-      } catch (e) {
-        // non-fatal if settings table missing
-        console.warn("Hero: settings not available", e);
-      }
-    })();
+    setSiteSettings(null); // Demo mode - no settings
   }, []);
 
   // Keep local state in sync for slideshow logic

@@ -4,11 +4,6 @@ import Hero from "@/components/Hero";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { generateSEOMetadata } from "@/lib/seo-helpers";
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import rehypeHighlight from "rehype-highlight";
-import { MDXBuilderComponents } from "@/components/BuilderRuntime";
 
 // Lazy load below-the-fold components for better initial page load
 const Services = dynamic(() => import("@/components/Services"), {
@@ -56,48 +51,10 @@ export const metadata = generateSEOMetadata({
   pageType: "website",
 });
 
-// Try to import rehype-raw, but fall back gracefully if not available
-let rehypeRaw: any;
-try {
-  rehypeRaw = require("rehype-raw");
-} catch {
-  console.warn(
-    "rehype-raw not available on home page; raw HTML in MDX will not be parsed"
-  );
-}
+// Demo version - no MDX processing needed
 
-export default async function HomePage() {
-  // If an editor-managed home page exists in content_pages (slug 'home'), render it.
-  // Otherwise, fall back to the static homepage sections below.
-  const supabase = createServerComponentClient({ cookies });
-  const { data: siteSettings } = await supabase
-    .from("settings")
-    .select("*")
-    .single();
-  const { data: page } = await supabase
-    .from("content_pages")
-    .select("*")
-    .eq("slug", "home")
-    .eq("published", true)
-    .maybeSingle();
-
-  if (page?.content) {
-    return (
-      <div className="min-h-screen">
-        <MDXRemote
-          source={page.content}
-          options={{
-            mdxOptions: {
-              rehypePlugins: rehypeRaw
-                ? [rehypeRaw as any, [rehypeHighlight, {}] as any]
-                : [[rehypeHighlight, {}] as any],
-            },
-          }}
-          components={MDXBuilderComponents as any}
-        />
-      </div>
-    );
-  }
+export default function HomePage() {
+  // Demo version - static content only
 
   // Static fallback homepage
   return (
