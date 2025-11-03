@@ -1,34 +1,35 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { generateSEOMetadata } from '@/lib/seo-helpers'
+import { mockBlogPosts } from '@/lib/mockBlogPosts'
 
 export const metadata = generateSEOMetadata({
-  title: 'Photography Blog - Tips & Insights from Studio37 Pinehurst, TX',
-  description: 'Read the latest photography tips, techniques, and insights from Studio37\'s professional photography team in Pinehurst, Texas. Learn about wedding, portrait, and event photography.',
+  title: 'Smoke Shop Blog - Tips & Insights from Bahama Mama Texas',
+  description: 'Read the latest guides on Delta-8, kratom, vaping, and more from Bahama Mama\'s expert team. Your trusted source for smoke shop education in Texas.',
   keywords: [
-    'photography blog',
-    'photography tips Texas',
-    'wedding photography advice',
-    'portrait photography tips',
-    'photography techniques',
-    'Studio37 blog',
-    'photographer insights Pinehurst'
+    'smoke shop blog',
+    'Delta-8 tips',
+    'kratom guide',
+    'vaping advice',
+    'cannabinoid education',
+    'Bahama Mama blog',
+    'smoke shop Texas'
   ],
-  canonicalUrl: 'https://studio37.cc/blog'
+  canonicalUrl: 'https://bahama-mama.com/blog'
 })
 
 export default async function BlogPage() {
-  // Demo mode: return empty blog without DB call
-  const posts: any[] = []
+  // Demo mode: use mock blog posts
+  const posts = mockBlogPosts
   const error = null
 
   return (
     <div className="min-h-screen pt-16">
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-3">Studio 37 Blog</h1>
+          <h1 className="text-4xl font-bold text-center mb-3">Bahama Mama Blog</h1>
           <p className="text-xl text-gray-600 text-center max-w-2xl mx-auto">
-            Photography insights, tips, and inspiration to help you capture life's precious moments.
+            Your trusted source for cannabinoid education, vaping tips, and smoke shop insights.
           </p>
         </div>
       </div>
