@@ -194,20 +194,8 @@ export default function EnhancedChatBot() {
 
   const saveLead = async (data: LeadData) => {
     try {
-      const { supabase } = await import("@/lib/supabase");
-
-      await supabase.from("leads").insert([
-        {
-          name: data.name || "Chat Lead",
-          email: data.email,
-          phone: data.phone,
-          service_interest: data.service,
-          budget_range: data.budget,
-          message: data.message || `Event date: ${data.eventDate || "TBD"}`,
-          source: "chatbot",
-          status: "new",
-        },
-      ]);
+      // Demo mode: skip Supabase call
+      console.log('Demo mode: Lead data would be saved:', data);
     } catch (error) {
       console.error("Error saving lead:", error);
     }
