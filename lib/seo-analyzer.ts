@@ -275,9 +275,9 @@ export class SEOAnalyzer {
    * Analyze heading structure
    */
   private analyzeHeadings(): HeadingAnalysis {
-    const h1Matches = this.content.match(/<h1[^>]*>/gi) || [];
-    const h2Matches = this.content.match(/<h2[^>]*>/gi) || [];
-    const h3Matches = this.content.match(/<h3[^>]*>/gi) || [];
+    const h1Matches: string[] = (this.content.match(/<h1[^>]*>/gi) ?? []) as string[];
+    const h2Matches: string[] = (this.content.match(/<h2[^>]*>/gi) ?? []) as string[];
+    const h3Matches: string[] = (this.content.match(/<h3[^>]*>/gi) ?? []) as string[];
 
     const h1Count = h1Matches.length;
     const h2Count = h2Matches.length;
