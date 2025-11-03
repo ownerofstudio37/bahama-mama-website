@@ -4,7 +4,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useGalleryImages } from '@/hooks/useGalleryImages'
+// Demo version - no gallery hook needed
 import { Camera, Users, Building, Heart, ArrowRight } from 'lucide-react'
 
 const services = [
@@ -72,12 +72,7 @@ export default function Services() {
 	const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
 	const categories = services.map(s => s.category)
-	const { data: images } = useGalleryImages({
-		categories,
-		featured: true,
-		orderBy: 'display_order',
-		ascending: true,
-	})
+	const images = null // Demo mode - no gallery images
 
 	useEffect(() => {
 		if (!images) return

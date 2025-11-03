@@ -5,8 +5,8 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, Star } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
-import { useGalleryImages } from '@/hooks/useGalleryImages'
-import type { GalleryImage } from '@/lib/supabase'
+// Demo version - no gallery hook needed
+type GalleryImage = any // Demo type
 
 interface GalleryProps {
   initialImages: GalleryImage[]
@@ -21,8 +21,8 @@ export default function GalleryClient({ initialImages, categories }: GalleryProp
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null)
   const [selectedIndex, setSelectedIndex] = useState(0)
 
-  // Background refresh using React Query; hydrate with server-provided data
-  const { data: allImages = initialImages } = useGalleryImages({}, { initialData: initialImages })
+  // Demo version - use initial images only
+  const allImages = initialImages
 
   // Set initial category from URL parameter
   useEffect(() => {

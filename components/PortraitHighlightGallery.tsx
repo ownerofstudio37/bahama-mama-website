@@ -1,18 +1,12 @@
 'use client'
 
 import React from 'react'
-import { useGalleryImages } from '@/hooks/useGalleryImages'
-import type { GalleryImage } from '@/lib/supabase'
+// Demo version - no gallery hook needed
 import OptimizedImage from './OptimizedImage'
 import Link from 'next/link'
 
 export default function PortraitHighlightGallery() {
-  const { data: images } = useGalleryImages({
-    featured: true,
-    limit: 6,
-    orderBy: 'created_at',
-    ascending: false,
-  })
+  const images = null // Demo mode
 
   if (!images || images.length === 0) return null
 
