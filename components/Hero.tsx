@@ -1,7 +1,7 @@
  "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import { Camera, ArrowRight } from "lucide-react";
+import { Leaf, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { getPageConfig } from "@/lib/pageConfig";
@@ -64,11 +64,11 @@ export default function Hero() {
     };
   }, [galleryImages]);
 
-  const heroTitle: string = siteSettings?.hero_title || cfg?.hero_title || "Studio ";
+  const heroTitle: string = siteSettings?.hero_title || cfg?.hero_title || "Bahama ";
   const heroSubtitle: string =
     siteSettings?.hero_subtitle ||
     cfg?.hero_subtitle ||
-    "Capturing your precious moments with artistic excellence and professional craftsmanship";
+    "#1 Premier CBD and alternative products retailer in Texas with over 3,500 different products";
   // Use slideshow image if available, else fallback to config/default
   const heroImage: string =
     galleryImages.length > 0
@@ -97,7 +97,7 @@ export default function Hero() {
           alt={
             galleryImages.length > 0
               ? galleryImages[currentIndex]?.title || "Homepage slideshow"
-              : "Studio 37 Photography background"
+              : "Bahama Mama Smoke Shop background"
           }
           fill
           priority
@@ -110,13 +110,13 @@ export default function Hero() {
         />
       </div>
 
-      {/* Overlay with vintage gradient */}
+      {/* Overlay with tropical gradient */}
       <div
         className="absolute inset-0 z-10"
         style={{
-          background: `linear-gradient(to top, rgba(120, 53, 15, ${
+          background: `linear-gradient(to top, rgba(15, 118, 110, ${
             overlayPct / 100
-          }), rgba(146, 64, 14, ${
+          }), rgba(20, 184, 166, ${
             Math.max(overlayPct - 20, 0) / 100
           }), rgba(0,0,0,0))`,
         }}
@@ -130,8 +130,8 @@ export default function Hero() {
 
       <div className="relative z-20 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="inline-block p-2 border-4 border-amber-200/30 rounded-full mb-8">
-            <Camera className="h-16 w-16 text-amber-200" />
+          <div className="inline-block p-2 border-4 border-teal-200/30 rounded-full mb-8">
+            <Leaf className="h-16 w-16 text-teal-200" />
           </div>
 
           <h1
@@ -139,12 +139,12 @@ export default function Hero() {
             style={titleColorCSS ? { color: titleColorCSS } : undefined}
             suppressHydrationWarning
           >
-            {heroTitle || "Studio "}
-            <span className="text-amber-200">37</span>
+            {heroTitle || "Bahama "}
+            <span className="text-amber-300">Mama</span>
           </h1>
 
           <p
-            className="text-lg md:text-xl lg:text-2xl mb-8 text-amber-50 max-w-2xl mx-auto font-light"
+            className="text-lg md:text-xl lg:text-2xl mb-8 text-teal-50 max-w-2xl mx-auto font-light"
             style={subtitleColorCSS ? { color: subtitleColorCSS } : undefined}
             suppressHydrationWarning
           >
@@ -153,7 +153,7 @@ export default function Hero() {
 
           {/* Show current image category and title if slideshow is active */}
           {galleryImages.length > 0 && (
-            <div className="mb-6 text-amber-100 text-lg font-medium">
+            <div className="mb-6 text-teal-100 text-lg font-medium">
               <span className="capitalize">
                 {galleryImages[currentIndex]?.category}
               </span>
@@ -167,30 +167,30 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="/book-a-session"
+              href="/contact"
               className="btn-primary text-lg px-8 py-4 inline-flex items-center"
             >
-              Book Your Session
+              Find Store Locations
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
 
             <Link
-              href="/gallery"
-              className="btn-secondary text-lg px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-amber-200/30 hover:border-amber-200/50 transition-colors"
+              href="/services"
+              className="btn-secondary text-lg px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-teal-200/30 hover:border-teal-200/50 transition-colors"
             >
-              View Portfolio
+              Shop 3,500+ Products
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Vintage frame border */}
-      <div className="absolute inset-8 border border-amber-200/20 pointer-events-none z-10 hidden md:block"></div>
+      {/* Tropical frame border */}
+      <div className="absolute inset-8 border border-teal-200/20 pointer-events-none z-10 hidden md:block"></div>
 
       {/* Animated scroll indicator - pure CSS */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce-slow">
-        <div className="w-6 h-10 border-2 border-amber-200/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-amber-200/70 rounded-full mt-2"></div>
+        <div className="w-6 h-10 border-2 border-teal-200/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-teal-200/70 rounded-full mt-2"></div>
         </div>
       </div>
 

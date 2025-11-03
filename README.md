@@ -1,16 +1,16 @@
-# Studio 37 Photography Website
+# Bahama Mama Smoke Shop Website
 
-A modern, professional photography studio website built with Next.js, featuring a CRM system, lead generation, and customer support chatbot.
+A modern, professional smoke shop website built with Next.js, featuring a CRM system, lead generation, and customer support chatbot.
 
 ## 🚀 Features
 
 - 🎨 Modern, responsive design with Tailwind CSS
-- 📊 Built-in CRM and lead management system
-- 🤖 Custom lead generation chatbot
+- 📊 Built-in CRM and customer management system
+- 🤖 Custom customer support chatbot
 - 📝 Content management capabilities
-- 🖼️ Portfolio gallery with filtering
-- 📧 Lead capture forms with validation
-- 🔒 Admin dashboard for lead management
+- 🖼️ Product gallery with filtering
+- 📧 Customer inquiry forms with validation
+- 🔒 Admin dashboard for customer management
 - 📱 Mobile-first responsive design
 - ⚡ Optimized for performance and SEO
 
@@ -29,8 +29,8 @@ A modern, professional photography studio website built with Next.js, featuring 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/smallhorseman/studio37-website.git
-   cd studio37-website
+   git clone https://github.com/[YOUR-USERNAME]/bahama-mama-website.git
+   cd bahama-mama-website
    ```
 
 2. **Install dependencies**
@@ -84,12 +84,12 @@ A modern, professional photography studio website built with Next.js, featuring 
 │   └── page.tsx           # Homepage
 ├── components/
 │   ├── ChatBot.tsx        # Customer support chatbot
-│   ├── Gallery.tsx        # Portfolio gallery
+│   ├── Gallery.tsx        # Product gallery
 │   ├── Hero.tsx           # Hero section
-│   ├── LeadCaptureForm.tsx # Lead generation form
+│   ├── LeadCaptureForm.tsx # Customer inquiry form
 │   ├── Navigation.tsx     # Main navigation
-│   ├── Services.tsx       # Services section
-│   └── Testimonials.tsx   # Client testimonials
+│   ├── Services.tsx       # Products section
+│   └── Testimonials.tsx   # Customer testimonials
 ├── lib/
 │   └── supabase.ts        # Database client
 ├── supabase/
@@ -102,10 +102,10 @@ A modern, professional photography studio website built with Next.js, featuring 
 
 Access the admin dashboard at `/admin` to:
 
-- View and manage leads
-- Update lead status
+- View and manage customer inquiries
+- Update inquiry status
 - Content management (coming soon)
-- Gallery management (coming soon)
+- Product gallery management (coming soon)
 
 ## Support
 

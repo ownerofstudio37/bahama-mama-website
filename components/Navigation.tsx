@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Camera } from 'lucide-react'
+import { Menu, X, Leaf } from 'lucide-react'
 import Image from 'next/image'
 import { supabase } from '@/lib/supabase'
 
@@ -13,8 +13,8 @@ export default function Navigation() {
   const [logoUrl, setLogoUrl] = useState<string | null>(null)
   const [dbLogoUrl, setDbLogoUrl] = useState<string | null>(null)
   // Badge concept (light/dark) as default fallbacks
-  const DEFAULT_LOGO_LIGHT = '/brand/studio37-badge-light.svg'
-  const DEFAULT_LOGO_DARK = '/brand/studio37-badge-dark.svg'
+  const DEFAULT_LOGO_LIGHT = '/brand/bahama-mama-badge-light.svg'
+  const DEFAULT_LOGO_DARK = '/brand/bahama-mama-badge-dark.svg'
   
   // Avoid hydration mismatch by only rendering after mount
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function Navigation() {
   // Derive which logo to show based on scroll and DB value without refetching
   useEffect(() => {
     // If DB provided a custom logo, prefer it unless it matches an outdated asset pattern
-    if (dbLogoUrl && !/(studio37-logo)/i.test(dbLogoUrl)) {
+    if (dbLogoUrl && !/(studio37-logo|bahama-mama-logo)/i.test(dbLogoUrl)) {
       setLogoUrl(dbLogoUrl)
       return
     }
@@ -75,7 +75,7 @@ export default function Navigation() {
           <Link 
             href="/" 
             className="flex items-center space-x-2"
-            aria-label="Studio 37 Photography - Home"
+            aria-label="Bahama Mama Smoke Shop - Home"
           >
             {logoUrl ? (
               <div className="flex items-center gap-2" suppressHydrationWarning>
@@ -84,21 +84,21 @@ export default function Navigation() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
                     src={logoUrl} 
-                    alt="Studio 37 Photography - Professional photography in Pinehurst, TX" 
+                    alt="Bahama Mama Smoke Shop - Premium smoke shop in Texas" 
                     className={`w-auto object-contain transition-all duration-300 ${scrolled ? 'h-8' : 'h-10'}`}
                   />
                 </div>
               </div>
             ) : (
               <>
-                <div className={`rounded-full p-1 ${scrolled ? 'bg-amber-100' : 'bg-white/20'}`}>
-                  <Camera 
-                    className={`h-8 w-8 ${scrolled ? 'text-amber-700' : 'text-amber-200'}`} 
+                <div className={`rounded-full p-1 ${scrolled ? 'bg-teal-100' : 'bg-white/20'}`}>
+                  <Leaf 
+                    className={`h-8 w-8 ${scrolled ? 'text-teal-700' : 'text-teal-200'}`} 
                     aria-hidden="true"
                   />
                 </div>
-                <span className={`text-xl font-serif font-bold ${scrolled ? 'text-amber-900' : 'text-white'}`}>
-                  Studio 37
+                <span className={`text-xl font-serif font-bold ${scrolled ? 'text-teal-900' : 'text-white'}`}>
+                  Bahama Mama
                 </span>
               </>
             )}
@@ -115,7 +115,7 @@ export default function Navigation() {
               href="/gallery" 
               className={`hover:text-amber-600 focus:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 transition-colors font-medium px-2 py-1 rounded ${scrolled ? 'text-amber-900' : 'text-white'}`}
             >
-              Gallery
+              Products
             </Link>
             <Link 
               href="/services" 
@@ -142,10 +142,10 @@ export default function Navigation() {
               Contact
             </Link>
             <Link 
-              href="/book-a-session" 
+              href="/contact" 
               className={`hover:text-amber-600 focus:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 transition-colors font-medium px-2 py-1 rounded ${scrolled ? 'text-amber-900' : 'text-white'}`}
             >
-              Book a Session
+              Visit Us
             </Link>
             <Link 
               href="/admin" 
@@ -185,7 +185,7 @@ export default function Navigation() {
                 className="hover:text-amber-600 focus:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 transition-colors font-medium text-amber-900 px-2 py-1 rounded"
                 onClick={() => setIsOpen(false)}
               >
-                Gallery
+                Products
               </Link>
               <Link 
                 href="/services" 
@@ -216,11 +216,11 @@ export default function Navigation() {
                 Contact
               </Link>
               <Link 
-                href="/book-a-session" 
+                href="/contact" 
                 className="hover:text-amber-600 focus:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 transition-colors font-medium text-amber-900 px-2 py-1 rounded"
                 onClick={() => setIsOpen(false)}
               >
-                Book a Session
+                Visit Us
               </Link>
               <Link 
                 href="/admin" 

@@ -40,19 +40,19 @@ const DiscountNewsletterModal = dynamic(
 );
 
 export const metadata = generateSEOMetadata({
-  title: "Professional Photography Services in Pinehurst, TX",
+  title: "#1 CBD Retailer in America - Bahama Mama Texas Locations",
   description:
-    "Studio37 offers professional wedding, portrait, event, and commercial photography services in Pinehurst, Texas and surrounding areas. Serving Montgomery County, The Woodlands, and Houston.",
+    "Bahama Mama is the #1 Premier CBD and alternative products retailer in Texas with 100+ locations. Over 3,500 products including CBD, kratom, vapes, and smoking accessories.",
   keywords: [
-    "wedding photography Pinehurst TX",
-    "portrait photographer Texas",
-    "event photography Montgomery County",
-    "commercial photography The Woodlands",
-    "professional photographer near me",
-    "family portraits Pinehurst",
-    "engagement photography Texas",
+    "CBD retailer Texas",
+    "CBD products Texas",
+    "kratom Texas", 
+    "vape shop Texas",
+    "smoking accessories",
+    "Bahama Mama locations",
+    "CBD store Houston Dallas Austin",
   ],
-  canonicalUrl: "https://studio37.cc",
+  canonicalUrl: "https://bahama-mama.com",
   pageType: "website",
 });
 
@@ -111,11 +111,11 @@ export default async function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
-              Ready to Capture Your Story?
+              Visit One of Our 100+ Texas Locations
             </h2>
             <p className="text-lg text-gray-600">
-              Let's discuss your photography needs and create something
-              beautiful together.
+              Experience the #1 Premier CBD retailer with over 3,500 products including CBD, 
+              kratom, vapes, and smoking accessories.
             </p>
           </div>
           <LeadCaptureForm />

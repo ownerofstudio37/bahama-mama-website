@@ -24,13 +24,13 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   title: {
-    template: `%s | ${businessInfo.name} - Professional Photography Pinehurst, TX`,
-    default: `Studio37 - Houston-based Photography | Blending Vintage Film Warmth with Modern Digital Precision`,
+    template: `%s | ${businessInfo.name} - Premium Smoke Shop Texas`,
+    default: `Bahama Mama - Premium Smoke Shop | Delta-8, Kratom & Nicotine Products in Texas`,
   },
   description:
-    "Studio37 Photography blends vintage film warmth with modern digital precision. We specialize in weddings, portraits, and commercial photography in Houston, TX and surrounding areas.",
+    "Bahama Mama is a premium smoke shop in Texas offering high-quality Delta-8 cannabinoids, kratom products, and nicotine accessories. Exceptional products and customer service.",
   keywords:
-    "photography, photographer, Houston TX, Pinehurst TX, wedding photography, portrait photography, vintage style photography, film photography, digital photography, commercial photography",
+    "smoke shop, Delta-8, kratom, nicotine, vaping, smoking accessories, cannabinoids, Texas smoke shop, premium smoke shop, Delta-8 THC, HHC, Delta-9, Delta-10",
   authors: [{ name: businessInfo.name }],
   creator: businessInfo.name,
   publisher: businessInfo.name,

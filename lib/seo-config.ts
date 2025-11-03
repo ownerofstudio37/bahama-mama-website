@@ -1,49 +1,46 @@
 // Local Business SEO Configuration
 export const businessInfo = {
-  name: 'Studio37',
-  legalName: 'Studio37 Photography',
-  description: 'Professional photography services in Pinehurst, Texas. Specializing in wedding, portrait, event, and commercial photography.',
+  name: 'Bahama Mama',
+  legalName: 'Bahama Mama',
+  description: 'Premier CBD and alternative products retailer in Texas. Offering over 3,500 different products including CBD, kratom, vapes, and smoking accessories.',
   address: {
-    streetAddress: '1701 Goodson Loop Unit 80',
-    addressLocality: 'Pinehurst',
+    streetAddress: '[ADDRESS TO BE PROVIDED]',
+    addressLocality: '[CITY TO BE PROVIDED]',
     addressRegion: 'TX',
-    postalCode: '77362',
+    postalCode: '[ZIP TO BE PROVIDED]',
     addressCountry: 'US',
-    fullAddress: '1701 Goodson Loop Unit 80, Pinehurst, TX 77362'
+    fullAddress: '[FULL ADDRESS TO BE PROVIDED]'
   },
   contact: {
-    phone: '832-713-9944',
-    email: 'sales@studio37.cc',
-    website: 'https://studio37.cc'
+    phone: '[PHONE TO BE PROVIDED]',
+    email: '[EMAIL TO BE PROVIDED]',
+    website: 'https://bahama-mama.com'
   },
   geo: {
     latitude: 30.1647,  // Approximate coordinates for Pinehurst, TX
     longitude: -95.4677
   },
   serviceAreas: [
-    'Pinehurst',
-    'Montgomery',
-    'Spring',
-    'Tomball',
-    'Magnolia',
-    'The Woodlands',
-    'Conroe',
-    'Houston'
+    'Houston',
+    'Dallas', 
+    'Austin',
+    'Montrose',
+    'Texas'
   ],
   services: [
-    'Wedding Photography',
-    'Portrait Photography',
-    'Event Photography',
-    'Commercial Photography',
-    'Family Portraits',
-    'Corporate Headshots',
-    'Engagement Sessions',
-    'Bridal Photography'
+    'CBD Products',
+    'CBD Pet Products', 
+    'Vapes and Disposable Vapes',
+    'Vape Mods and Devices',
+    'Kratom Products',
+    'Hookah Products',
+    'Water Pipes',
+    'Smoking Accessories'
   ],
   socialMedia: {
-    facebook: 'https://facebook.com/studio37photography',
-    instagram: 'https://instagram.com/studio37photography',
-    twitter: 'https://twitter.com/studio37photo'
+    facebook: 'https://www.facebook.com/Bahamamontrose',
+    instagram: 'https://www.instagram.com/bahama.mama.montrose',
+    twitter: 'https://www.tiktok.com/@bahamamamamontrose'
   },
   businessHours: {
     monday: '9:00-18:00',
