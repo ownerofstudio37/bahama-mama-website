@@ -9,45 +9,164 @@ import { ArrowRight, Building2, Package, Briefcase, TrendingUp } from 'lucide-re
 const commercialHighlights = [
   {
     id: 1,
-    title: 'Premium CBD Oil',
-    description: 'Full spectrum CBD tincture from top-tier brands',
-    src: 'https://images.unsplash.com/photo-1556228724-4e447ef95b5d?w=900&fit=crop',
-    category: 'cbd'
+    title: 'Premium Glass Collection',
+    description: 'Handcrafted borosilicate water pipes and bongs',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762198154/PANA4592.JPG_u3liza.jpg',
+    category: 'glass'
   },
   {
     id: 2,
-    title: 'Disposables & Mods',
-    description: 'Latest vape devices and disposable vapes in all flavors',
-    src: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a9?w=900&fit=crop',
-    category: 'vapes'
-  },
-  {
-    id: 3,
-    title: 'Kratom Selection',
-    description: 'Quality-sourced kratom in multiple strains and forms',
-    src: 'https://images.unsplash.com/photo-1585238342028-4bbc4a91b14c?w=900&fit=crop',
-    category: 'kratom'
-  },
-  {
-    id: 4,
-    title: 'Hookah Essentials',
-    description: 'Bowls, hoses, coals, and premium shisha flavors',
-    src: 'https://images.unsplash.com/photo-1600959907703-6295e634e32e?w=900&fit=crop',
-    category: 'hookah'
-  },
-  {
-    id: 5,
-    title: 'Glass Water Pipe',
-    description: 'Handcrafted borosilicate glass with premium finish',
-    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762198154/PANA4592.JPG_u3liza.jpg',
+    title: 'Designer Accessories',
+    description: 'High-end smoking accessories and essentials',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199448/PANA5655.JPG_dnjq94.jpg',
     category: 'accessories'
   },
   {
+    id: 3,
+    title: 'Premium Product Display',
+    description: 'Curated selection of top-shelf brands',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199448/PANA5693.JPG_zanx8i.jpg',
+    category: 'featured'
+  },
+  {
+    id: 4,
+    title: 'Vape Collection',
+    description: 'Latest devices, mods, and disposables',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199448/PANA5593.JPG_efk8tg.jpg',
+    category: 'vapes'
+  },
+  {
+    id: 5,
+    title: 'Store Interior',
+    description: 'Modern retail space with extensive inventory',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199448/PANA5897.JPG_ykxxi6.jpg',
+    category: 'store'
+  },
+  {
     id: 6,
-    title: 'Delta-8 Gummies',
-    description: 'Popular edibles in assorted strengths and flavors',
-    src: 'https://images.unsplash.com/photo-1615486363955-c5d3590ed4f5?w=900&fit=crop',
-    category: 'edibles'
+    title: 'CBD & Wellness',
+    description: 'Premium CBD oils, edibles, and topicals',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5421.JPG_unmnos.jpg',
+    category: 'cbd'
+  },
+  {
+    id: 7,
+    title: 'Artistic Glass Pieces',
+    description: 'Unique handblown glass and decorative pieces',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5314.JPG_dxkjit.jpg',
+    category: 'glass'
+  },
+  {
+    id: 8,
+    title: 'Hookah Collection',
+    description: 'Traditional and modern hookah setups',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5249.JPG_n5xdtm.jpg',
+    category: 'hookah'
+  },
+  {
+    id: 9,
+    title: 'Product Showcase',
+    description: 'Wide variety of smoking and vaping products',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5465.JPG_fvkcsf.jpg',
+    category: 'featured'
+  },
+  {
+    id: 10,
+    title: 'Kratom & Botanicals',
+    description: 'Quality kratom strains and herbal products',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5082.JPG_fr0fnz.jpg',
+    category: 'kratom'
+  },
+  {
+    id: 11,
+    title: 'Glass Art Display',
+    description: 'Premium water pipes and artistic pieces',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199444/PANA5281.JPG_yaainy.jpg',
+    category: 'glass'
+  },
+  {
+    id: 12,
+    title: 'Accessories Wall',
+    description: 'Complete selection of smoking essentials',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199443/PANA5122.JPG_jith74.jpg',
+    category: 'accessories'
+  },
+  {
+    id: 13,
+    title: 'Retail Display',
+    description: 'Organized product sections for easy browsing',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199443/PANA4986.JPG_wbj4bb.jpg',
+    category: 'store'
+  },
+  {
+    id: 14,
+    title: 'Premium Selection',
+    description: 'Top brands and exclusive products',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199443/PANA5050.JPG_uz9caj.jpg',
+    category: 'featured'
+  },
+  {
+    id: 15,
+    title: 'Vape Bar',
+    description: 'Extensive e-liquid and device selection',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199443/PANA5027.JPG_xiqa0z.jpg',
+    category: 'vapes'
+  },
+  {
+    id: 16,
+    title: 'Glass Showcase',
+    description: 'Functional art pieces and smoking devices',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199443/PANA4601.JPG_o7zjuy.jpg',
+    category: 'glass'
+  },
+  {
+    id: 17,
+    title: 'Product Range',
+    description: 'Diverse inventory across all categories',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199442/PANA4931.JPG_fgxnre.jpg',
+    category: 'featured'
+  },
+  {
+    id: 18,
+    title: 'Specialty Items',
+    description: 'Unique and hard-to-find products',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199442/PANA4810.JPG_l2myo6.jpg',
+    category: 'accessories'
+  },
+  {
+    id: 19,
+    title: 'Designer Glass',
+    description: 'Premium handcrafted glass pieces',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199442/PANA4592.JPG_zxfm5s.jpg',
+    category: 'glass'
+  },
+  {
+    id: 20,
+    title: 'Store Selection',
+    description: 'Browse our extensive product catalog',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199442/PANA4496.JPG_ojljy9.jpg',
+    category: 'store'
+  },
+  {
+    id: 21,
+    title: 'Quality Products',
+    description: 'Lab-tested and certified items',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199442/PANA4809.JPG_dl3ohw.jpg',
+    category: 'featured'
+  },
+  {
+    id: 22,
+    title: 'Glass Collection',
+    description: 'Artistic and functional smoking pieces',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199442/PANA4759.JPG_j6vsro.jpg',
+    category: 'glass'
+  },
+  {
+    id: 23,
+    title: 'Premium Inventory',
+    description: 'High-end brands and exclusive offerings',
+    src: 'https://res.cloudinary.com/dmjxho2rl/image/upload/v1762199442/PANA4720.JPG_qaax7x.jpg',
+    category: 'featured'
   }
 ]
 
