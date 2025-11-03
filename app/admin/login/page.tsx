@@ -18,10 +18,12 @@ export default function AdminLoginPage() {
       const res = await fetch("/api/admin/demo-login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ email, code }),
       });
       if (res.ok) {
-        router.replace(next);
+        // Use full navigation to ensure middleware sees the new cookie immediately
+        window.location.href = next;
       } else {
         alert("Demo login failed. Try again.");
       }
