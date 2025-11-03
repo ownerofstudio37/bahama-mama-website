@@ -342,7 +342,8 @@ export class SEOAnalyzer {
    * Analyze images
    */
   private analyzeImages(): ImageAnalysis {
-    const imgMatches = this.content.match(/<img[^>]+>/gi) || [];
+    // Ensure explicit typing to avoid never[] inference when there are no matches
+    const imgMatches: string[] = (this.content.match(/<img[^>]+>/gi) ?? []) as string[];
 
     let missingAlt = 0;
     imgMatches.forEach((img) => {
